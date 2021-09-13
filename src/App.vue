@@ -101,10 +101,11 @@ export default {
       ],
     };
   },
-  questionsAnswered(is_correct){
+  questionAnswered(is_correct){
 if(is_correct){
     this.totalCorrect++;
 }
+this.questionsAnswered++;
   }
 };
 </script>
