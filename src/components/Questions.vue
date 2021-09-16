@@ -7,7 +7,7 @@
         <div class="single-question" v-for="(question,qi) in questions" :key="question.q" v-show="questionsAnswered==qi">
             <div class="question">{{question.q}}</div>
             <div class="answers">
-                <div class="answer" v-for="answer in question.answers" :key="answer.text" @click="selectAnswer(answer.is_correct)">{{answer.text}}</div>
+                <div class="answer" v-for="answer in question.answers" :key="answer.text" @click.prevent="selectAnswer(answer.is_correct)">{{answer.text}}</div>
   
             </div>
         </div>
@@ -20,6 +20,7 @@ props:['questions','questionsAnswered'],
 emits:['question-answered'],
 methods:{
     selectAnswer(is_correct) {
+        console.log("rx",is_correct)
         this.$emit("question-answered",is_correct);
 
     }
