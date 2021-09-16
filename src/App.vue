@@ -1,6 +1,7 @@
 <template>
   <div class="ctr">
     <transition name="fade" mode="out-in">
+      <!-- mode questions transtions will be out then results transition will be in -->
     <questions
       v-if="questionsAnswered < questions.length"
       :questions="questions"
