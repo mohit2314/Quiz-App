@@ -111,13 +111,14 @@ if(is_correct){
     this.totalCorrect++;
 }
 this.questionsAnswered++;
-console.log("questionAnswered",this.questionsAnswered++);  }
   },
-
-  reset(){
+   reset(){
     this.questionsAnswered=0;
     this.totalCorrect=0;
   }
+  },
+
+ 
  
 };
 </script>
